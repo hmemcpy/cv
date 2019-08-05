@@ -1,0 +1,11 @@
+.DS_Store
+*.fls
+*.fdb_latexmk
+*.pdf
+*.xdv
+*.gz
+*.pyg
+*.log
+*.aux
+*.synctex(busy)
+*.out

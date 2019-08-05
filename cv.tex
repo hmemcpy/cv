@@ -1,0 +1,128 @@
+% !TEX TS-program = lualatex
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{libertine}
+\usepackage{fontawesome}
+\usepackage{longtable}
+\usepackage[cm]{fullpage}
+
+% headers and footers
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyfoot[L]{Igal Tabachnik}
+\fancyfoot[C]{Page \thepage\ of \pageref*{LastPage}}
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+
+% StackOverflow-like tags
+% https://tex.stackexchange.com/a/311949/142692
+\usepackage{tikz}
+\definecolor{backg}{RGB}{225,236,244}
+\definecolor{tagtxt}{RGB}{88,115,159}
+\newcommand\sotag[1]{%
+    \tikz[baseline]{%
+        \node[anchor=base, text=tagtxt, fill=backg, font=\sffamily, text depth=.5mm] {#1};
+    }%
+}
+
+% Helpers for adding job entries
+\newcommand{\job}[2]{\large\sffamily \textbf{#1} at \textbf{#2}}
+\newcommand{\sep}{\multicolumn{2}{c}{}\\}
+
+% tweak the url colors
+\usepackage{hyperref}
+\definecolor{linkcolor}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolor, linkcolor=linkcolor}
+
+% nicer-looking section titles
+\usepackage{titlesec}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1em}{3pt}
+
+\begin{document}
+
+% --------------------TITLE-------------
+\par{\centering
+		{\Huge \textsc{Igal Tabachnik}
+	}\bigskip\par}
+
+\hrule
+\vspace{0.5em}
+\begin{tabular}{rl}
+    \textsc{Phone:}     & +972 54 4766343\\
+    \textsc{Email:}     & \href{mailto:hmemcpy@gmail.com}{hmemcpy@gmail.com}\\
+    \textsc{Socials:}   & \faHome{} \href{https://hmemcpy.com}{hmemcpy.com} 
+                        | \faTwitter{} \href{https://twitter.com/hmemcpy}{twitter} 
+                        | \faLinkedin{} \href{https://www.linkedin.com/in/igaltabachnik/}{linkedin}
+                        | \faGithub{} \href{https://github.com/hmemcpy}{github}
+                        | \faStackOverflow{} \href{https://stackoverflow.com/users/8205/igal-tabachnik}{stackoverflow}
+\end{tabular}
+
+\section{Summary}
+\begin{tabular}{p{0.9\textwidth}}
+    I'm a software developer based in Israel. Currently on a functional programming journey, having fallen in love with functional languages after nearly 15 years of more ``traditional'' object-oriented development. Every day is a new discovery!\\\\
+    
+    Formerly a .NET developer, working primarily on developer tools (such as debuggers, unit testing frameworks, plugins for Visual Studio and IDEs from JetBrains.)\\\\
+
+    Interests: \sotag{functional-programming} \sotag{scala} \sotag{typelevel-stack} \sotag{zio} \sotag{scalaz} \sotag{haskell} \sotag{nix} \sotag{bazel}
+\end{tabular}  
+
+\section{Work Experience}
+\begin{longtable}{r|p{0.72\textwidth}}
+  \textsc{Jun 2016--Aug 2019} & \job{Senior Software Engineer}{Wix.com}, Israel \\(3 years, 3 months)
+    &\sotag{scala} \sotag{functional-programming} \sotag{bazel} \sotag{intellij-plugins}\\&\\
+    &Worked in the build infrastructure team, supporting the migration to the \textit{Bazel} build system. Main responsibilities included adding Scala support and contributing fixes to the \textit{Bazel IntelliJ plugin} (maintained by Google), as well as creating internal tools for Wix-specific functionality.\\&\\
+    &Created a functional programming interest group within Wix (over 100 developers joined over time), led hands-on workshops and training on various topics in functional programming.\\&\\
+    &Helped organize company engineering events, most notably \textit{Scalapeño} (Israeli Scala conference), community outreach, co-organized \textit{Underscore}---the Israeli Scala user group.\\\sep
+  
+  \hline
+  \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below, see LinkedIn profile for full details)}\\\sep
+  
+  \textsc{Jul 2015--May 2016} & \job{Software Developer}{Particular Software}, Israel (Remote) \\(11 months)
+    &\sotag{c\#} \sotag{nservicebus}\\&\\
+    &Building NServiceBus and the Particular Platform products.\\\sep
+  
+  \textsc{Jul 2012--Jan 2015} & \job{Lead Developer}{OzCode} (a CodeValue company), Israel \\(2 years, 7 months)
+    &\sotag{c\#} \sotag{roslyn} \sotag{debugging-api} \sotag{visual-studio-extensions}\\&\\
+    &OzCode is a Visual Studio extension for debugging productivity. I was responsible for the entire stack, from core product development to prioritizing features and issues, research, as well as marketing and content creation, branding, and artwork direction.\\\sep
+  
+  \multicolumn{2}{r}{\footnotesize\itshape (cont. on the next page)}\\\sep
+  \newpage
+  
+  \textsc{Mar 2010--Nov 2011} & \job{Senior Software Developer}{Typemock}, Israel \\(1 year, 9 months)
+    &\sotag{c\#} \sotag{.net-internals} \sotag{il-weaving} \sotag{aop} \sotag{api-design} \sotag{code-generation}\\&\\
+    &Developed a unit testing suite of products for software developers. Mainly responsible for the isolation (mocking) framework, based on the unmanaged \emph{CLR Profiling API} to perform runtime inspection and IL weaving to allow runtime code modifications.\\\sep
+
+  \textsc{Oct 2008--Mar 2010} & \job{Software Developer}{Eternix}, Israel \\(1 year, 6 months)
+    &\sotag{c\#} \sotag{webdav} \sotag{winforms} \sotag{unit-testing} \sotag{tdd}\\&\\
+    &Lead developer of a WebDAV based file server, implementing and maintaining features such as file encryption, versioning, quota, and user management.\\\sep
+
+  \textsc{Oct 2007--Oct 2008} & \job{Software Developer}{InfoGin}, Israel \\(1 year, 1 month)
+    &\sotag{c\#} \sotag{asp.net} \sotag{mobile-web} \sotag{wap}\\&\\
+    &Developer in the professional services team, created web applications for mobile devices, based on the specifications provided by customers.\\\sep
+
+  \textsc{Jun 2005--Sep 2007} & \job{Software Developer}{PrizmaSoft}, Israel \\(2 years, 4 months)
+    &\sotag{c\#} \sotag{winforms} \sotag{continuous-integration}\\&\\
+    &Developed client applications for a business process management system, maintained build and deployment scripts.\\\sep
+\end{longtable}
+
+\section{Speaking}
+\begin{tabular}{rl}
+    \textsc{Video:}&\href{https://www.youtube.com/watch?v=g1EvM4CbUvM}{Journey to Functional Programming} (Wix Engineering, 2007)\\
+    &\href{https://www.youtube.com/watch?v=N6ZJwnvTjLA}{Zero to FP (Hebrew)} (Underscore meetup, 2018)\\
+\end{tabular}
+
+\section{Skills and Accomplishments}
+\begin{tabular}{rl}
+    \textsc{Languages:}& Hebrew, English, Russian\\
+    \textsc{Workshops:}& Functional Programming in Scala, Zero to FP (originally by John De Goes)\\
+    \textsc{Publications:}& Category Theory for Programmers by Bartosz Milewski\\&---a freely-available PDF typeset in \LaTeX{}, hardcover book (\href{https://github.com/hmemcpy/milewski-ctfp-pdf}{link})\\
+    \textsc{OSS Projects:}& Agent Mulder plugin for ReSharper, Plain Text Offenders\\
+\end{tabular}
+
+\end{document}
