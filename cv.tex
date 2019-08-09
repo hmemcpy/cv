@@ -21,14 +21,11 @@
 
 % StackOverflow-like tags
 % https://tex.stackexchange.com/a/311949/142692
+% https://tex.stackexchange.com/questions/387499/how-to-create-a-border-that-looks-like-a-tag
 \usepackage{tikz}
-\definecolor{backg}{RGB}{225,236,244}
+\definecolor{tagbg}{RGB}{225,236,244}
 \definecolor{tagtxt}{RGB}{88,115,159}
-\newcommand\sotag[1]{%
-    \tikz[baseline]{%
-        \node[anchor=base, text=tagtxt, fill=backg, font=\sffamily, text depth=.5mm] {#1};
-    }%
-}
+\newcommand{\sotag}[1]{\tikz[baseline]{\node[anchor=base, rounded corners=0.5ex, text height=1.5ex, text depth=.25ex, fill=tagbg, draw=tagbg, text=tagtxt] {#1};}}
 
 % Helpers for adding job entries
 \newcommand{\job}[2]{\large\sffamily \textbf{#1} at \textbf{#2}}
