@@ -7,6 +7,7 @@
 \usepackage{fontawesome}
 \usepackage{longtable}
 \usepackage[cm]{fullpage}
+\usepackage{amssymb}
 
 % headers and footers
 \usepackage{fancyhdr}
@@ -54,42 +55,45 @@
   \textsc{Phone:}     & +972 54 4766343\\
   \textsc{Email:}     & \href{mailto:hmemcpy@gmail.com}{hmemcpy@gmail.com}\\
   \textsc{Socials:}   & \faHome{} \href{https://hmemcpy.com}{hmemcpy.com} 
-                      | \faTwitter{} \href{https://twitter.com/hmemcpy}{twitter} 
-                      | \faLinkedin{} \href{https://www.linkedin.com/in/igaltabachnik/}{linkedin}
+                      | $\mathbb{X}$ \href{https://twitter.com/hmemcpy}{@hmemcpy}
                       | \faGithub{} \href{https://github.com/hmemcpy}{github}
+                      | \faLinkedin{} \href{https://www.linkedin.com/in/igaltabachnik/}{linkedin}
                       | \faStackOverflow{} \href{https://stackoverflow.com/users/8205/igal-tabachnik}{stackoverflow}
 \end{tabular}
 
 \section{Summary}
 \begin{tabular}{p{0.9\textwidth}}
-  I'm a software developer based in Israel. Currently on a functional programming journey, having fallen in love with functional languages after nearly 15 years of more ``traditional'' object-oriented development. Every day is a new discovery!\\\\
-  
-  Formerly a .NET developer, working primarily on developer tools (such as debuggers, unit testing frameworks, plugins for Visual Studio and IDEs from JetBrains.)\\\\
+  I'm a software developer based in Israel with over 20 years of professional experience across multiple domains and technologies.\\\\
 
-  Interests: \sotag{functional-programming} \sotag{scala} \sotag{typelevel-stack} \sotag{zio} \sotag{scalaz} \sotag{haskell} \sotag{nix} \sotag{bazel} \sotag{rust}
+  I am currently working primarily with Scala using the ZIO stack (typesafe, purely functional library for concurrent and asynchronous programming in Scala). I specialize in backend development: implementing highly concurrent and robust services, domain modeling, and testing. I am particularly interested in Developer Experience (DX) and have created compiler and IDE plugins that significantly improve developer productivity.\\\\
+
+  I am an open source contributor and an occasional organizer and guest speaker at conferences and local meetups. I love teaching others and helping newcomers to become "unstuck".
 \end{tabular}
 
 \section{Work Experience}
 \begin{longtable}{r|p{0.72\textwidth}}
-  \textsc{Jun 2016--Aug 2019} & \job{Senior Software Engineer}{Wix.com}, Israel \\(3 years, 3 months)
-    &\sotag{scala} \sotag{functional-programming} \sotag{bazel} \sotag{intellij-plugins}\\&\\
-    &Worked in the build infrastructure team, supporting the migration to the \textit{Bazel} build system. Main responsibilities included adding Scala support and contributing fixes to the \textit{Bazel IntelliJ plugin} (maintained by Google), as well as creating internal tools for Wix-specific functionality.\\&\\
-    &Created a functional programming interest group within Wix (over 100 developers joined over time), led hands-on workshops and training on various topics in functional programming.\\&\\
-    &Helped organize company engineering events, most notably \textit{Scalapeño} (Israeli Scala conference), community outreach, co-organized \textit{Underscore}---the Israeli Scala user group.\\\sep
+
+  \textsc{Apr 2020--Mar 2024} & \job{Founding Engineer and Tech Lead}{Unit}, Israel \\(4 years)
+    &\sotag{scala} \sotag{zio} \sotag{infrastructure} \sotag{onboarding} \sotag{developer-experience} \\&\\
+    &First employee at Unit. Held several positions across numerous teams.\\&\\
+    &Created and maintained most of the backend infrastructure using pure functional programming in Scala, based on the ZIO framework and associated libraries.\\&\\
+    &Implemented services and protocols according to their exact specification, using advanced data modeling techniques allowed by the strong type system of Scala.\\&\\
+    &Was the go-to person for supporting and onboarding newcomers, troubleshooting, creating educational materials and hands-on workshops. Created internal tools (compiler and IDE plugins) to improve developer productivity. Defined engineering guidelines and testing specifications.\\\sep
   
   \hline
-  \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below, see LinkedIn profile for full details)}\\\sep
+  \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below, see the LinkedIn profile for full details)}\\\sep
+
+  \textsc{Jun 2016--Aug 2019} & \job{Senior Software Engineer}{Wix.com}, Israel \\(3 years, 3 months)
+    &\sotag{scala} \sotag{functional-programming} \sotag{bazel} \sotag{intellij-plugins}\\&\\
+    &Worked in the build infrastructure team, supporting the migration to the \textit{Bazel} build system. Main responsibilities included adding Scala support and contributing fixes to the \textit{Bazel IntelliJ plugin} (maintained by Google), as well as creating internal tools for Wix-specific functionality.\\\sep
   
-  \textsc{Jul 2015--May 2016} & \job{Software Developer}{Particular Software}, Israel (Remote) \\(11 months)
+  \textsc{Jul 2015--May 2016} & \job{Software Developer}{Particular Software}, Israel \\(11 months)
     &\sotag{c\#} \sotag{nservicebus}\\&\\
     &Building NServiceBus and the Particular Platform products.\\\sep
   
   \textsc{Jul 2012--Jan 2015} & \job{Lead Developer}{OzCode} (a CodeValue company), Israel \\(2 years, 7 months)
     &\sotag{c\#} \sotag{roslyn} \sotag{debugging-api} \sotag{visual-studio-extensions}\\&\\
     &OzCode is a Visual Studio extension for debugging productivity. I was responsible for the entire stack, from core product development to prioritizing features and issues, research, as well as marketing and content creation, branding, and artwork direction.\\\sep
-  
-  \multicolumn{2}{r}{\footnotesize\itshape (cont. on the next page)}\\\sep
-  \newpage
   
   \textsc{Mar 2010--Nov 2011} & \job{Senior Software Developer}{Typemock}, Israel \\(1 year, 9 months)
     &\sotag{c\#} \sotag{.net-internals} \sotag{il-weaving} \sotag{aop} \sotag{api-design} \sotag{code-generation}\\&\\
@@ -110,34 +114,25 @@
 
 \section{Programming Proficiency}
 \begin{tabular}{rl}
-  \textsc{Languages:}& Scala, C\# (proficient), Haskell (beginner), F\#, OCaml (familiar), Rust, Python (learning)\\
-  \textsc{Patterns:}& FP, OOP, ES/CQRS, DDD, TDD, Property-based testing\\
-  \textsc{Libraries:}& http4s, ZIO, Cats, Cats-Effect, Circe, Refined, Doobie, PureConfig, Specs2, ScalaCheck\\
-  \textsc{Tools:}& Bazel, SBT, IntelliJ SDK, Nix, Docker, TeamCity\\
-  \textsc{Misc:}& Category Theory, abstract algebra (learning)
+  \textsc{Languages:}& Scala (expert), C\#, Java (proficient), Haskell (beginner), F\#, OCaml (familiar), Rust (learning)\\
+  \textsc{Patterns:}& ES/CQRS, DDD, OOP, TDD, Property-based testing\\
+  \textsc{Technologies:}& ZIO and Typelevel libraries, Postgres, Docker, Kubernetes, Kafka, TestContainers\\
+  \textsc{Tools:}& Scala macros, sbt, Pants/Bazel, IntelliJ plugins\\
 \end{tabular}
 
 \section{Skills and Accomplishments}
 \begin{tabular}{rl}
   \textsc{Languages:}& Hebrew, English, Russian\\
-  \textsc{Workshops:}& Functional Programming in Scala, Zero to FP (originally by John A. De Goes)\\
   \textsc{Publications:}& Category Theory for Programmers by Bartosz Milewski (\href{https://github.com/hmemcpy/milewski-ctfp-pdf}{PDF}, \href{https://www.blurb.com/b/9621951-category-theory-for-programmers-new-edition-hardco}{hardcover book})\\
-  \textsc{OSS Projects:}& \href{https://github.com/zio/zio-intellij}{ZIO plugin for IntelliJ}, Agent Mulder plugin for ReSharper\\
+  \textsc{Open-source:}&Contributor to various open source projects (ZIO, various plugins for IntelliJ IDEA)
 \end{tabular}
 
 \section{Speaking}
 \begin{tabular}{rl}
   \textsc{Video:}&\href{https://www.youtube.com/watch?v=g1EvM4CbUvM}{Journey to Functional Programming} (Wix Engineering, 2017)\\
   &\href{https://www.youtube.com/watch?v=N6ZJwnvTjLA}{Zero to FP (Hebrew)} (Underscore meetup, 2018)\\
-\end{tabular}
-
-\section{Specializations}
-\begin{tabular}{rl}
-  \textsc{Courses:}
-  &Functional Programming Principles in Scala | Coursera\\
-  &Functional Programming in Haskell (Russian) | Stepik (\href{https://stepik.org/cert/53556}{certificate})\\
-  &Applied Functional Programming in Scala (2-day training) | John A. De Goes\\
-  &Advanced Async \& Concurrent Programming with ZIO (3-day training) | John A. De Goes
+  &\href{https://www.youtube.com/watch?v=qBmZJwmd0CA}{Everything you (didn't) want to know about implicits (Hebrew)} (Unit Engineering, 2022)\\
+  &\href{https://www.youtube.com/watch?v=eILoMm9t4rI}{The Business of Scala} (Scala Matters Meet-up @ HiBob, 2023)\\  
 \end{tabular}
 
 \end{document}
