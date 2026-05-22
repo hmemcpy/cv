@@ -29,7 +29,7 @@
 \newcommand{\sotag}[1]{\tikz[baseline]{\node[anchor=base, rounded corners=0.5ex, text height=1.5ex, text depth=.25ex, fill=tagbg, draw=tagbg, text=tagtxt] {#1};}}
 
 % Helpers for adding job entries
-\newcommand{\job}[2]{\large\sffamily \textbf{#1} at \textbf{#2}}
+\newcommand{\job}[2]{\large\sffamily \textbf{#1} at \textbf{#2}\rule[-0.45em]{0pt}{1.45em}}
 \newcommand{\sep}{\multicolumn{2}{c}{}\\}
 
 % tweak the url colors
@@ -54,7 +54,7 @@
 \begin{tabular}{rl}
   \textsc{Phone:}     & +972 54 4766343\\
   \textsc{Email:}     & \href{mailto:hmemcpy@gmail.com}{hmemcpy@gmail.com}\\
-  \textsc{Socials:}   & \faHome{} \href{https://hmemcpy.com}{hmemcpy.com} 
+  \textsc{Socials:}   & \faHome{} \href{https://hmemcpy.com}{hmemcpy.com}
                       | $\mathbb{X}$ \href{https://twitter.com/hmemcpy}{@hmemcpy}
                       | \faGithub{} \href{https://github.com/hmemcpy}{github}
                       | \faLinkedin{} \href{https://www.linkedin.com/in/igaltabachnik/}{linkedin}
@@ -63,71 +63,72 @@
 
 \section{Summary}
 \begin{tabular}{p{0.9\textwidth}}
- I am a seasoned software developer with nearly 20 years of professional experience across various domains and technologies.\\\
- 
- My current focus is on functional programming, specifically in Scala, using foundational libraries such as ZIO and Cats. I firmly believe that typed functional programming is the ``secret ingredient'' and a means to developing robust and correct software that is highly resistant to bugs.\\\
+ Senior backend/infrastructure engineer with over 20 years of experience building financial systems, developer platforms, IDE tooling, and production services. Strong focus on typed functional languages, AI-first agentic engineering, backend architecture, software correctness, and developer experience (DX).\\[0.35em]
 
- I am an open-source contributor and guest speaker at conferences and local meetups. I also have a keen interest in Developer Experience (DX) and have developed compiler and IDE plugins that substantially enhance developer productivity. I love teaching and helping others become ``unstuck''.
+ Open-source contributor and frequent speaker, with a long-running interest in tools that make developers more effective: compiler and IDE plugins, build tooling, workshops, technical writing, and hands-on mentoring.
 \end{tabular}
 
 \section{Work Experience}
 \begin{longtable}{r|p{0.72\textwidth}}
 
+  \textsc{Jan 2025--May 2026} & \job{Founding Engineer}{EurekaLabs}, Israel \\(1 year, 5 months)
+    &Founding engineer (first hire), building infrastructure for Ethereum block construction. Led development of an Ethereum block builder written in Rust, spanning core product features and ongoing compatibility across network and protocol versions.\\&\\
+    &Introduced AI-first engineering practices for the team, including agentic workflows, prompt and skills management, orchestration, and multi-agent swarms.\\&\\
+    &\sotag{rust} \sotag{ethereum} \sotag{ai-engineering} \sotag{agentic-workflows}\\\sep
+
   \textsc{Apr 2020--Mar 2024} & \job{Founding Engineer and Tech Lead}{Unit}, Israel \\(4 years)
-    &\sotag{scala} \sotag{zio} \sotag{infrastructure} \sotag{microservices} \sotag{tooling} \\&\\
-    &As the first employee at Unit, I helped build the engineering team from the ground up, and over the years held various responsibilities and positions across multiple teams.\\&\\
-    &Designed and created most of the core backend infrastructure, such as the data access and serialization layers, service architectures, domain models, testing infrastructure and more.\\&\\
-    &Implemented various payment protocols (ACH, Wires, Cards, etc.), APIs and corresponding services end-to-end.\\&\\
-    &Served as the primary resource for supporting and mentoring team members, troubleshooting issues, and developing educational materials and hands-on workshops, engineering guidelines and testing specifications.\\\sep
-  
+    &Founding engineer (first hire). Grew the engineering organization and helped establish core backend architecture, engineering practices, testing standards, protocols, and workflows.\\&\\
+    &Designed backend infrastructure including data access, wire formats, service architecture, domain models, and testing infrastructure. Built payment protocol integrations and backend services for ACH, wires, cards, APIs, and related financial workflows.\\&\\
+    &Created engineering guidelines, workshops, and hands-on material for Scala, ZIO, testing, and internal platform usage. Served as mentor and escalation point across teams for architecture, debugging, and production issues.\\&\\
+    &\sotag{scala} \sotag{zio} \sotag{postgres} \sotag{payment-protocols} \sotag{aws}\\\sep
+
   \hline
-  \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below, see the LinkedIn profile for full details)}\\\sep
+  \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below, see LinkedIn for full details)}\\\sep
 
   \textsc{Jun 2016--Aug 2019} & \job{Senior Software Engineer}{Wix.com}, Israel \\(3 years, 3 months)
-    &\sotag{scala} \sotag{functional-programming} \sotag{bazel} \sotag{intellij-plugins}\\&\\
-    &Worked in the build infrastructure team, supporting the migration to the \textit{Bazel} build system. Main responsibilities included adding Scala support and contributing fixes to the \textit{Bazel IntelliJ plugin} (maintained by Google), as well as creating internal tools for Wix-specific functionality.\\\sep
-  
+    &Joined the build infrastructure team during the migration to the \textit{Bazel} build system. Added Scala support, contributed fixes to the Google-maintained \textit{Bazel IntelliJ plugin}, and created internal tools for Wix-specific build and IDE workflows.\\&\\
+    &\sotag{scala} \sotag{bazel} \sotag{intellij-sdk}\\\pagebreak[4]\sep
+
   \textsc{Jul 2015--May 2016} & \job{Software Developer}{Particular Software}, Israel \\(11 months)
-    &\sotag{c\#} \sotag{nservicebus}\\&\\
-    &Building NServiceBus and the Particular Platform products.\\\sep
-  
+    &Built NServiceBus and Particular Platform products: distributed .NET messaging infrastructure and developer-facing APIs.\\
+    &\sotag{c\#} \sotag{nservicebus} \sotag{.net}\\\sep
+
   \textsc{Jul 2012--Jan 2015} & \job{Lead Developer}{OzCode} (a CodeValue company), Israel \\(2 years, 7 months)
-    &\sotag{c\#} \sotag{roslyn} \sotag{debugging-api} \sotag{visual-studio-extensions}\\&\\
-    &OzCode is a Visual Studio extension for debugging productivity. I was responsible for the entire stack, from core product development to prioritizing features and issues, research, as well as marketing and content creation, branding, and artwork direction.\\\sep
-  
+    &Led development of a Visual Studio extension for debugging productivity, spanning core product work, feature research, technical content, and branding.\\
+    &\sotag{c\#} \sotag{roslyn} \sotag{debugging-api} \sotag{visual-studio-extensions}\\\sep
+
   \textsc{Mar 2010--Nov 2011} & \job{Senior Software Developer}{Typemock}, Israel \\(1 year, 9 months)
-    &\sotag{c\#} \sotag{.net-internals} \sotag{il-weaving} \sotag{aop} \sotag{api-design} \sotag{code-generation}\\&\\
-    &Developed a unit testing suite of products for software developers. Mainly responsible for the isolation (mocking) framework, based on the unmanaged \emph{CLR Profiling API} to perform runtime inspection and IL weaving to allow runtime code modifications.\\\sep
+    &Developed unit testing products, mainly the isolation framework based on the unmanaged \emph{CLR Profiling API}, runtime inspection, and IL weaving.\\
+    &\sotag{c\#} \sotag{.net-internals} \sotag{il-weaving} \sotag{aop}\\\sep
 
   \textsc{Oct 2008--Mar 2010} & \job{Software Developer}{Eternix}, Israel \\(1 year, 6 months)
-    &\sotag{c\#} \sotag{webdav} \sotag{winforms} \sotag{unit-testing} \sotag{tdd}\\&\\
-    &Lead developer of a WebDAV based file server, implementing and maintaining features such as file encryption, versioning, quota, and user management.\\\sep
+    &Lead developer of a WebDAV-based file server with encryption, versioning, quota, and user management features.\\
+    &\sotag{c\#} \sotag{webdav} \sotag{winforms}\\\sep
 
   \textsc{Oct 2007--Oct 2008} & \job{Software Developer}{InfoGin}, Israel \\(1 year, 1 month)
-    &\sotag{c\#} \sotag{asp.net} \sotag{mobile-web} \sotag{wap}\\&\\
-    &Developer in the professional services team, created web applications for mobile devices, based on the specifications provided by customers.\\\sep
+    &Created customer-specific mobile web applications in the professional services team.\\
+    &\sotag{c\#} \sotag{asp.net} \sotag{mobile-web} \sotag{wap}\\\sep
 
   \textsc{Jun 2005--Sep 2007} & \job{Software Developer}{PrizmaSoft}, Israel \\(2 years, 4 months)
-    &\sotag{c\#} \sotag{winforms} \sotag{continuous-integration}\\&\\
-    &Developed client applications for a business process management system, maintained build and deployment scripts.\\\sep
+    &Developed client applications for a business process management system and maintained build and deployment scripts.\\
+    &\sotag{c\#} \sotag{winforms} \sotag{continuous-integration}\\\sep
 \end{longtable}
 
-\section{Programming Proficiency}
+\section{Technical Profile}
 \begin{tabular}{rl}
-  \textsc{Languages:}& Scala (expert), C\#, Java (proficient), Haskell (intermediate), Rust, TypeScript (learning)\\
-  \textsc{Patterns:}& ES/CQRS, DDD, OOP, TDD, Property-based testing\\
-  \textsc{Technologies:}& ZIO and Typelevel libraries, Postgres, Redis, Docker, Kubernetes, Kafka, TestContainers\\
-  \textsc{Tools:}& Scala macros, sbt plugins, Pants/Bazel, IntelliJ SDK\\
+  \textsc{Languages:}& Scala, Rust, Haskell, TypeScript, C\#, Java\\
+  \textsc{Libraries:}& ZIO, TypeLevel, Tokio, Effect.ts\\
+  \textsc{Practices:}& Architecture (ES/CQRS, DDD), testing (TDD, PBT, E2E), AI agent workflows\\
+  \textsc{Technologies:}& Postgres, Redis, Docker, Kubernetes, Kafka, AWS\\
 \end{tabular}
 
-\section{Skills and Accomplishments}
+\section{Open Source and Publications}
 \begin{tabular}{rl}
-  \textsc{Languages:}& Hebrew, English, Russian\\
   \textsc{Publications:}& Category Theory for Programmers by Bartosz Milewski (\href{https://github.com/hmemcpy/milewski-ctfp-pdf}{PDF}, \href{https://www.blurb.com/b/9621951-category-theory-for-programmers-new-edition-hardco}{hardcover book})\\
-  \textsc{Open-source:}&Contributor: ZIO, IntelliJ IDEA. Created the ZIO plugin for IntelliJ, zio-clippy (see GitHub)
+  \textsc{Open-source:}& Contributor: TypeLevel, ZIO, IntelliJ IDEA, Zed
 \end{tabular}
 
-\section{Speaking}
+\section{Selected Talks}
 \begin{tabular}{rl}
   \textsc{Video:}&\href{https://www.youtube.com/watch?v=eILoMm9t4rI}{The Business of Scala} (Scala Matters Meetup @ HiBob, 2023)\\
   &\href{https://www.youtube.com/watch?v=qBmZJwmd0CA}{Everything you (didn't) want to know about implicits (Hebrew)} (Unit Engineering, 2022)\\
