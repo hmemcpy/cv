@@ -1,0 +1,136 @@
+% !TEX TS-program = lualatex
+%
+% Generic CV template based on cv.tex.
+% Adapted from Professional CV by Alessandro Plasmati.
+% StackOverflow-like tags adapted from:
+% https://tex.stackexchange.com/a/311949/142692
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{libertine}
+\usepackage{fontawesome}
+\usepackage{longtable}
+\usepackage[cm]{fullpage}
+\usepackage{amssymb}
+
+% headers and footers
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyfoot[L]{Alex Example}
+\fancyfoot[C]{Page \thepage\ of \pageref*{LastPage}}
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+
+% StackOverflow-like tags
+\usepackage{tikz}
+\definecolor{tagbg}{RGB}{225,236,244}
+\definecolor{tagtxt}{RGB}{88,115,159}
+\newcommand{\sotag}[1]{\tikz[baseline]{\node[anchor=base, rounded corners=0.5ex, text height=1.5ex, text depth=.25ex, fill=tagbg, draw=tagbg, text=tagtxt] {#1};}}
+\makeatletter
+\newcommand{\sotagrow}[1]{\\[0.35em]& \@for\sotagitem:=#1\do{\sotag{\sotagitem} }\\}
+\makeatother
+
+% Helpers for adding job entries
+\newcommand{\job}[2]{\large\sffamily \textbf{#1} at \textbf{#2}\rule[-0.45em]{0pt}{1.45em}}
+\newcommand{\sep}{\multicolumn{2}{c}{}\\}
+
+% tweak the url colors
+\usepackage{hyperref}
+\definecolor{linkcolor}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolor, linkcolor=linkcolor}
+
+% nicer-looking section titles
+\usepackage{titlesec}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1em}{3pt}
+
+\begin{document}
+
+% --------------------TITLE-------------
+\par{\centering
+		{\Huge \textsc{Alex Example}
+	}\bigskip\par}
+
+\hrule
+\vspace{0.5em}
+\begin{tabular}{rl}
+  \textsc{Phone:}     & +1 555 0100\\
+  \textsc{Email:}     & \href{mailto:alex@example.com}{alex@example.com}\\
+  \textsc{Links:}     & \faHome{} \href{https://example.com}{example.com}
+                      | \faGithub{} \href{https://github.com/example}{github}
+                      | \faLinkedin{} \href{https://www.linkedin.com/in/example/}{linkedin}
+                      | \faStackOverflow{} \href{https://stackoverflow.com/users/000000/example}{stackoverflow}
+\end{tabular}
+
+\section{Summary}
+\begin{tabular}{p{0.9\textwidth}}
+ Senior backend/platform engineer with experience across backend systems, developer tools, service architecture, testing and build infrastructure.\\\\
+
+ I work on systems that need clear ownership, careful design, and practical delivery. I am comfortable moving between product work, platform work, and internal developer tooling.\\\\
+
+ My background is in statically typed languages, but I care more about the engineering approach than the stack itself. I am comfortable stepping outside my preferred tools and working with new languages and workflows.
+\end{tabular}
+
+\section{Work Experience \hfill{\normalfont\footnotesize\itshape (full details on LinkedIn)}}
+\begin{longtable}{r|p{0.72\textwidth}}
+
+  \textsc{Jan 2024--Present} & \job{Staff Software Engineer}{Example Labs}, Remote \\(2 years)
+    &Worked on a high-throughput backend platform, leading development across core services, internal APIs, and production reliability work.\\&\\
+    &Introduced stronger engineering practices around code review, testing, observability, and internal developer workflows.\sotagrow{rust,distributed-systems,developer-tools,observability}\sep
+
+  \textsc{Apr 2020--Dec 2023} & \job{Tech Lead}{Example Financial}, New York \\(3 years, 9 months)
+    &Helped build the engineering team and core backend platform from the ground up.\\&\\
+    &Designed and implemented backend infrastructure: data access, wire protocols, service architecture, distributed calls, domain models, and testing infrastructure.\\&\\
+    &Implemented payment-protocol services and APIs end-to-end, including bank transfers, card workflows, and related financial operations.\\&\\
+    &A large part of my role was helping engineers become effective in a typed functional codebase, from onboarding and one-on-one mentorship to debugging support, workshops, and engineering guidelines.\sotagrow{scala,zio,postgres,payment-protocols,aws}\sep
+
+  \hline
+  \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below)}\\\sep
+
+  \textsc{Jun 2017--Mar 2020} & \job{Senior Software Engineer}{Example.com}, London \\(2 years, 10 months)
+    &Joined the build infrastructure team during a migration to a new build system. Added language support, contributed fixes to IDE integrations, and created internal tools for build and developer workflows.\sotagrow{scala,bazel,intellij-sdk}\pagebreak[4]\sep
+
+  \textsc{Jul 2015--May 2017} & \job{Software Developer}{Messaging Systems Inc.}, Remote \\(1 year, 11 months)
+    &Built distributed messaging infrastructure and developer-facing APIs.
+    \sotagrow{c\#,messaging,.net}\sep
+
+  \textsc{Jul 2012--Jan 2015} & \job{Lead Developer}{Debug Tools Ltd.}, Berlin \\(2 years, 7 months)
+    &Led development of an IDE extension for debugging productivity, spanning core product work, feature research, technical content, and branding.
+    \sotagrow{c\#,debugging-api,ide-extensions}\sep
+
+  \textsc{Mar 2010--Nov 2011} & \job{Senior Software Developer}{Testing Tools Ltd.}, Amsterdam \\(1 year, 9 months)
+    &Developed unit testing products around runtime inspection, code generation, and isolation framework internals.
+    \sotagrow{c\#,.net-internals,testing-tools}\sep
+
+  \textsc{Oct 2008--Mar 2010} & \job{Software Developer}{Storage Systems Ltd.}, Dublin \\(1 year, 6 months)
+    &Led development of a file server with encryption, versioning, quota, and user management features.
+    \sotagrow{c\#,webdav,winforms}\sep
+\end{longtable}
+
+\section{Technical Profile}
+\begin{tabular}{rl}
+  \textsc{Languages:}& Scala, Rust, Haskell, C\#, Java, TypeScript\\
+  \textsc{Focus:}& Distributed systems, payment systems, service architecture, developer tools, DevEx\\
+  \textsc{Concurrency:}& ZIO, TypeLevel stacks, Tokio, green/virtual threads, JVM internals\\
+  \textsc{Tooling:}& Bazel, compiler/IDE plugins, SDKs, debugging/runtime instrumentation\\
+  \textsc{Practices:}& DDD, ES/CQRS, TDD, property-based testing, E2E testing\\
+\end{tabular}
+
+\section{Open Source and Publications}
+\begin{tabular}{rl}
+  \textsc{Publication:}& Example technical publication or book project (\href{https://example.com}{link})\\
+  \textsc{Open source:}& Contributions to selected open-source projects and developer tools
+\end{tabular}
+
+\section{Selected Talks}
+\begin{tabular}{rl}
+  \textsc{Talks:}&\href{https://example.com}{Building Reliable Backend Systems} (Engineering Meetup, 2024)\\
+  &\href{https://example.com}{Practical Functional Programming} (Internal Engineering, 2023)\\
+  &\href{https://example.com}{Testing Systems That Matter} (Developer Conference, 2022)\\
+\end{tabular}
+
+\end{document}
