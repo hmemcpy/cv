@@ -27,6 +27,7 @@
 \definecolor{tagbg}{RGB}{225,236,244}
 \definecolor{tagtxt}{RGB}{88,115,159}
 \newcommand{\sotag}[1]{\tikz[baseline]{\node[anchor=base, rounded corners=0.5ex, text height=1.5ex, text depth=.25ex, fill=tagbg, draw=tagbg, text=tagtxt] {#1};}}
+\newcommand{\sotagrow}[1]{\\[0.35em]& #1\\}
 
 % Helpers for adding job entries
 \newcommand{\job}[2]{\large\sffamily \textbf{#1} at \textbf{#2}\rule[-0.45em]{0pt}{1.45em}}
@@ -63,55 +64,55 @@
 
 \section{Summary}
 \begin{tabular}{p{0.9\textwidth}}
- I am a software engineer with over 20 years of experience across various domains: backend systems, developer tools, functional programming, IDE extensions, and testing and build infrastructure. My current interest is agentic engineering: changing how teams deliver software in the age of AI.\\[0.35em]
+ I am a software engineer based in Israel with over 20 years of experience across various domains: backend systems, developer tools, functional programming, IDE extensions, testing and build infrastructure.\\\\
 
- My background is in backend engineering with statically typed languages, especially Scala and Rust, but I am open to new stacks and workflows. I care deeply about correctness, domain modeling, developer experience, compiler and IDE tooling, build systems, mentorship, and helping people become unstuck.
+ My current interest is agentic engineering: changing how teams deliver software in the age of AI.\\\\
+
+ My background is in backend engineering with statically typed languages, especially Scala and Rust, but I am open to new stacks, new workflows, and teams that are willing to rethink how software gets built.
 \end{tabular}
 
 \section{Work Experience \hfill{\normalfont\footnotesize\itshape (see LinkedIn for full details)}}
 \begin{longtable}{r|p{0.72\textwidth}}
 
   \textsc{Jan 2025--May 2026} & \job{Founding Engineer}{EurekaLabs}, Israel \\(1 year, 5 months)
-    &First engineering hire, building infrastructure for Ethereum block construction. Led development of an Ethereum block builder written in Rust, spanning core product features and ongoing compatibility across network and protocol versions.\\&\\
-    &Introduced AI-first engineering practices for the team, including agentic workflows, prompt and skills management, orchestration, and multi-agent swarms.\\&\\
-    &\sotag{rust} \sotag{ethereum} \sotag{ai-engineering} \sotag{agentic-workflows}\\\sep
+    &Founding engineer on EurekaBuilder, led development of an Ethereum block builder written in Rust, from low-level core features to maintaining compatibility across network and protocol versions.\\&\\
+    &Introduced AI-first engineering practices to the team: agentic engineering, prompt and skills management, orchestration, and multi-agent swarms.\sotagrow{\sotag{rust} \sotag{ethereum} \sotag{ai-engineering} \sotag{agentic-workflows}}\sep
 
   \textsc{Apr 2020--Mar 2024} & \job{Founding Engineer and Tech Lead}{Unit}, Israel \\(4 years)
-    &Joined as Unit's first employee and helped grow the engineering organization from the ground up. Established core backend architecture, engineering practices, testing standards, protocols, and workflows.\\&\\
-    &Designed backend infrastructure including data access, wire formats, service architecture, domain models, and testing infrastructure. Built payment protocol integrations and backend services for ACH, wires, cards, APIs, and related financial workflows.\\&\\
-    &Created engineering guidelines, workshops, and hands-on material for Scala, ZIO, testing, and internal platform usage. Served as mentor and escalation point across teams for architecture, debugging, and production issues.\\&\\
-    &\sotag{scala} \sotag{zio} \sotag{postgres} \sotag{payment-protocols} \sotag{aws}\\\sep
+    &As the first employee at Unit, I helped build the engineering team from the ground up, and over the years held various responsibilities and positions across multiple teams.\\&\\
+    &Designed and created most of the core backend infrastructure, such as the data access and serialization layers, service architectures, domain models, testing infrastructure and more.\\&\\
+    &Implemented various payment protocols (ACH, Wires, Cards, etc.), APIs and corresponding services end-to-end.\\&\\
+    &Served as the primary resource for supporting and mentoring team members, troubleshooting issues, and developing educational materials and hands-on workshops, engineering guidelines and testing specifications.\sotagrow{\sotag{scala} \sotag{zio} \sotag{postgres} \sotag{payment-protocols} \sotag{aws}}\sep
 
   \hline
   \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below)}\\\sep
 
   \textsc{Jun 2016--Aug 2019} & \job{Senior Software Engineer}{Wix.com}, Israel \\(3 years, 3 months)
-    &Joined the build infrastructure team during the migration to the \textit{Bazel} build system. Added Scala support, contributed fixes to the Google-maintained \textit{Bazel IntelliJ plugin}, and created internal tools for Wix-specific build and IDE workflows.\\&\\
-    &\sotag{scala} \sotag{bazel} \sotag{intellij-sdk}\\\pagebreak[4]\sep
+    &Joined the build infrastructure team during the migration to the \textit{Bazel} build system. Added Scala support, contributed fixes to the Google-maintained \textit{Bazel IntelliJ plugin}, and created internal tools for Wix-specific build and IDE workflows.\sotagrow{\sotag{scala} \sotag{bazel} \sotag{intellij-sdk}}\pagebreak[4]\sep
 
   \textsc{Jul 2015--May 2016} & \job{Software Developer}{Particular Software}, Israel \\(11 months)
-    &Built NServiceBus and Particular Platform products: distributed .NET messaging infrastructure and developer-facing APIs.\\
-    &\sotag{c\#} \sotag{nservicebus} \sotag{.net}\\\sep
+    &Built NServiceBus and Particular Platform products: distributed .NET messaging infrastructure and developer-facing APIs.
+    \sotagrow{\sotag{c\#} \sotag{nservicebus} \sotag{.net}}\sep
 
   \textsc{Jul 2012--Jan 2015} & \job{Lead Developer}{OzCode} (a CodeValue company), Israel \\(2 years, 7 months)
-    &Led development of a Visual Studio extension for debugging productivity, spanning core product work, feature research, technical content, and branding.\\
-    &\sotag{c\#} \sotag{roslyn} \sotag{debugging-api} \sotag{visual-studio-extensions}\\\sep
+    &Led development of a Visual Studio extension for debugging productivity, spanning core product work, feature research, technical content, and branding.
+    \sotagrow{\sotag{c\#} \sotag{roslyn} \sotag{debugging-api} \sotag{visual-studio-extensions}}\sep
 
   \textsc{Mar 2010--Nov 2011} & \job{Senior Software Developer}{Typemock}, Israel \\(1 year, 9 months)
-    &Developed unit testing products, mainly the isolation framework based on the unmanaged \emph{CLR Profiling API}, runtime inspection, and IL weaving.\\
-    &\sotag{c\#} \sotag{.net-internals} \sotag{il-weaving} \sotag{aop}\\\sep
+    &Developed unit testing products, mainly the isolation framework based on the unmanaged \emph{CLR Profiling API}, runtime inspection, and IL weaving.
+    \sotagrow{\sotag{c\#} \sotag{.net-internals} \sotag{il-weaving} \sotag{aop}}\sep
 
   \textsc{Oct 2008--Mar 2010} & \job{Software Developer}{Eternix}, Israel \\(1 year, 6 months)
-    &Lead developer of a WebDAV-based file server with encryption, versioning, quota, and user management features.\\
-    &\sotag{c\#} \sotag{webdav} \sotag{winforms}\\\sep
+    &Lead developer of a WebDAV-based file server with encryption, versioning, quota, and user management features.
+    \sotagrow{\sotag{c\#} \sotag{webdav} \sotag{winforms}}\sep
 
   \textsc{Oct 2007--Oct 2008} & \job{Software Developer}{InfoGin}, Israel \\(1 year, 1 month)
-    &Created customer-specific mobile web applications in the professional services team.\\
-    &\sotag{c\#} \sotag{asp.net} \sotag{mobile-web} \sotag{wap}\\\sep
+    &Created customer-specific mobile web applications in the professional services team.
+    \sotagrow{\sotag{c\#} \sotag{asp.net} \sotag{mobile-web} \sotag{wap}}\sep
 
   \textsc{Jun 2005--Sep 2007} & \job{Software Developer}{PrizmaSoft}, Israel \\(2 years, 4 months)
-    &Developed client applications for a business process management system and maintained build and deployment scripts.\\
-    &\sotag{c\#} \sotag{winforms} \sotag{continuous-integration}\\\sep
+    &Developed client applications for a business process management system and maintained build and deployment scripts.
+    \sotagrow{\sotag{c\#} \sotag{winforms} \sotag{continuous-integration}}\sep
 \end{longtable}
 
 \section{Technical Profile}
