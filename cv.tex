@@ -30,7 +30,7 @@
 \definecolor{tagtxt}{RGB}{88,115,159}
 \newcommand{\sotag}[1]{\tikz[baseline]{\node[anchor=base, rounded corners=0.5ex, text height=1.5ex, text depth=.25ex, fill=tagbg, draw=tagbg, text=tagtxt] {#1};}}
 \makeatletter
-\newcommand{\sotagrow}[1]{\\[0.35em]& \@for\sotagitem:=#1\do{\sotag{\sotagitem} }\\}
+\newcommand{\sotagrow}[1]{\par\vspace{4pt}\noindent\@for\sotagitem:=#1\do{\sotag{\sotagitem} }\\}
 \makeatother
 
 % Helpers for adding job entries
@@ -95,28 +95,31 @@
 \end{longtable}
 
 \newpage
+\begingroup
+\titlespacing{\section}{0pt}{1.4em}{6pt}
 \section{Earlier Experience \hfill{\normalfont\footnotesize\itshape (full details on LinkedIn)}}
 \begin{longtable}{@{}p{0.20\textwidth}|p{0.29\textwidth}|p{0.43\textwidth}@{}}
   \textsc{Jul 2015--May 2016} & \textbf{Software Developer}\newline Particular Software
     &Built distributed .NET messaging infrastructure and developer-facing APIs for NServiceBus and the Particular Platform.
-    \par\smallskip {\footnotesize\sotag{c\#} \sotag{nservicebus} \sotag{.net}} \\[0.9em]
+    \par\vspace{8pt} \\
   \textsc{Jul 2012--Jan 2015} & \textbf{Lead Developer}\newline OzCode (a CodeValue company)
     &Led development of a Visual Studio extension for debugging productivity.
-    \par\smallskip {\footnotesize\sotag{c\#} \sotag{roslyn} \sotag{debugging-api} \sotag{visual-studio-extensions}} \\[0.9em]
+    \par\vspace{8pt} \\
   \textsc{Mar 2010--Nov 2011} & \textbf{Senior Software Developer}\newline Typemock
     &Built unit-testing tools using the unmanaged CLR Profiling API, runtime inspection, and IL weaving.
-    \par\smallskip {\footnotesize\sotag{c\#} \sotag{.net-internals} \sotag{il-weaving} \sotag{aop}} \\[0.9em]
+    \par\vspace{8pt} \\
   \textsc{Oct 2008--Mar 2010} & \textbf{Software Developer}\newline Eternix
     &Lead developer of a WebDAV file server with encryption, versioning, quotas, and user management.
-    \par\smallskip {\footnotesize\sotag{c\#} \sotag{webdav} \sotag{winforms}} \\[0.9em]
+    \par\vspace{8pt} \\
   \textsc{Oct 2007--Oct 2008} & \textbf{Software Developer}\newline InfoGin
     &Built customer-specific mobile web applications in the professional services team.
-    \par\smallskip {\footnotesize\sotag{c\#} \sotag{asp.net} \sotag{mobile-web} \sotag{wap}} \\[0.9em]
+    \par\vspace{8pt} \\
   \textsc{Jun 2005--Sep 2007} & \textbf{Software Developer}\newline PrizmaSoft
     &Built business-process-management client applications and maintained build and deployment scripts.
-    \par\smallskip {\footnotesize\sotag{c\#} \sotag{winforms} \sotag{continuous-integration}}
+    \par\vspace{5pt}
 \end{longtable}
 
+\renewcommand{\arraystretch}{1.12}
 \section{Technical Profile}
 \begin{tabular}{rl}
   \textsc{Languages:}& Scala, Rust, Haskell, C\#, Java, TypeScript\\
@@ -144,4 +147,5 @@
   &\href{https://www.youtube.com/watch?v=g1EvM4CbUvM}{Journey to Functional Programming} (Wix Engineering, 2017)\\
 \end{tabular}
 
+\endgroup
 \end{document}
