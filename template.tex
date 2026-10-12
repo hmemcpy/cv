@@ -11,6 +11,8 @@
 \usepackage{libertine}
 \usepackage{fontawesome}
 \usepackage{longtable}
+\usepackage{colortbl}
+\arrayrulecolor{black!35}
 \usepackage[cm]{fullpage}
 \usepackage{amssymb}
 
@@ -31,7 +33,7 @@
 \definecolor{tagtxt}{RGB}{88,115,159}
 \newcommand{\sotag}[1]{\tikz[baseline]{\node[anchor=base, rounded corners=0.5ex, text height=1.5ex, text depth=.25ex, fill=tagbg, draw=tagbg, text=tagtxt] {#1};}}
 \makeatletter
-\newcommand{\sotagrow}[1]{\\[0.35em]& \@for\sotagitem:=#1\do{\sotag{\sotagitem} }\\}
+\newcommand{\sotagrow}[1]{\par\vspace{4pt}\noindent\@for\sotagitem:=#1\do{\sotag{\sotagitem} }\\}
 \makeatother
 
 % Helpers for adding job entries
@@ -88,49 +90,57 @@
     &Implemented payment-protocol services and APIs end-to-end, including bank transfers, card workflows, and related financial operations.\\&\\
     &A large part of my role was helping engineers become effective in a typed functional codebase, from onboarding and one-on-one mentorship to debugging support, workshops, and engineering guidelines.\sotagrow{scala,zio,postgres,payment-protocols,aws}\sep
 
-  \hline
-  \multicolumn{2}{r}{\footnotesize\itshape (abbreviated work history below)}\\\sep
-
   \textsc{Jun 2017--Mar 2020} & \job{Senior Software Engineer}{Example.com}, London \\(2 years, 10 months)
-    &Joined the build infrastructure team during a migration to a new build system. Added language support, contributed fixes to IDE integrations, and created internal tools for build and developer workflows.\sotagrow{scala,bazel,intellij-sdk}\pagebreak[4]\sep
-
-  \textsc{Jul 2015--May 2017} & \job{Software Developer}{Messaging Systems Inc.}, Remote \\(1 year, 11 months)
-    &Built distributed messaging infrastructure and developer-facing APIs.
-    \sotagrow{c\#,messaging,.net}\sep
-
-  \textsc{Jul 2012--Jan 2015} & \job{Lead Developer}{Debug Tools Ltd.}, Berlin \\(2 years, 7 months)
-    &Led development of an IDE extension for debugging productivity, spanning core product work, feature research, technical content, and branding.
-    \sotagrow{c\#,debugging-api,ide-extensions}\sep
-
-  \textsc{Mar 2010--Nov 2011} & \job{Senior Software Developer}{Testing Tools Ltd.}, Amsterdam \\(1 year, 9 months)
-    &Developed unit testing products around runtime inspection, code generation, and isolation framework internals.
-    \sotagrow{c\#,.net-internals,testing-tools}\sep
-
-  \textsc{Oct 2008--Mar 2010} & \job{Software Developer}{Storage Systems Ltd.}, Dublin \\(1 year, 6 months)
-    &Led development of a file server with encryption, versioning, quota, and user management features.
-    \sotagrow{c\#,webdav,winforms}\sep
+    &Joined the build infrastructure team during a migration to a new build system. Added language support, contributed fixes to IDE integrations, and created internal tools for build and developer workflows.\sotagrow{scala,bazel,intellij-sdk}
 \end{longtable}
 
+\newpage
+\begingroup
+\titlespacing{\section}{0pt}{1.4em}{6pt}
+\section{Earlier Experience \hfill{\normalfont\footnotesize\itshape (full details on LinkedIn)}}
+\begin{longtable}{@{}p{0.20\textwidth}|p{0.29\textwidth}|p{0.43\textwidth}@{}}
+  \textsc{Jul 2015--May 2017} & \textbf{Software Developer}\newline Messaging Systems Inc.
+    &Built distributed messaging infrastructure and developer-facing APIs.
+    \par\vspace{8pt} \\
+  \textsc{Jul 2012--Jan 2015} & \textbf{Lead Developer}\newline Debug Tools Ltd.
+    &Led development of an IDE extension for debugging productivity.
+    \par\vspace{8pt} \\
+  \textsc{Mar 2010--Nov 2011} & \textbf{Senior Software Developer}\newline Testing Tools Ltd.
+    &Developed unit testing products around runtime inspection, code generation, and isolation framework internals.
+    \par\vspace{8pt} \\
+  \textsc{Oct 2008--Mar 2010} & \textbf{Software Developer}\newline Storage Systems Ltd.
+    &Led development of a file server with encryption, versioning, quota, and user management features.
+    \par\vspace{5pt}
+\end{longtable}
+
+\renewcommand{\arraystretch}{1.12}
 \section{Technical Profile}
 \begin{tabular}{rl}
-  \textsc{Languages:}& Scala, Rust, Haskell, C\#, Java, TypeScript\\
-  \textsc{Focus:}& Distributed systems, payment systems, service architecture, developer tools, DevEx\\
-  \textsc{Concurrency:}& ZIO, TypeLevel stacks, Tokio, green/virtual threads, JVM internals\\
-  \textsc{Tooling:}& Bazel, compiler/IDE plugins, SDKs, debugging/runtime instrumentation\\
-  \textsc{Practices:}& DDD, ES/CQRS, TDD, property-based testing, E2E testing\\
+  \textsc{Expertise:}& Backend engineering, distributed systems, microservices,\\
+  &concurrency, functional programming, developer tools\\
+  \textsc{Practices:}& SOLID, DDD, CQRS, TDD, property-based testing, E2E testing\\
+  \textsc{Languages:}& Scala, Rust, Haskell, C\#, Java, TypeScript, Python\\
+  \textsc{Libraries and runtimes:}& ZIO, Typelevel libraries, Tokio, JVM/CLR internals\\
+  \textsc{Infrastructure:}& Kubernetes, PostgreSQL, Kafka, ZeroMQ, AWS\\
+  \textsc{Tooling:}& Bazel, compiler/IDE plugins, SDKs, production debugging\\
 \end{tabular}
 
-\section{Open Source and Publications}
-\begin{tabular}{rl}
-  \textsc{Publication:}& Example technical publication or book project (\href{https://example.com}{link})\\
-  \textsc{Open source:}& Contributions to selected open-source projects and developer tools
+\section{Open Source}
+\begin{tabular}{r p{0.75\textwidth}}
+  \textsc{Tools and Libraries:}& Selected developer tools and libraries:\\
+  &\faGithub{} \href{https://github.com/example/ide-plugin}{example-ide-plugin}: IDE integration for a library ecosystem.\\
+  &\faGithub{} \href{https://github.com/example/compiler-plugin}{example-compiler-plugin}: Compiler plugin that improves diagnostic messages.\\[0.35em]
+  \textsc{Book:}& \faGithub{} \href{https://github.com/example/book}{Example Technical Book} by Example Author:\\
+  &\LaTeX{} source and build tools for PDF and print editions of the book.\\[0.35em]
+  \textsc{Contributions:}& Bug fixes and feature contributions to selected open-source libraries, editors, and build tools.
 \end{tabular}
 
 \section{Selected Talks}
 \begin{tabular}{rl}
-  \textsc{Talks:}&\href{https://example.com}{Building Reliable Backend Systems} (Engineering Meetup, 2024)\\
-  &\href{https://example.com}{Practical Functional Programming} (Internal Engineering, 2023)\\
-  &\href{https://example.com}{Testing Systems That Matter} (Developer Conference, 2022)\\
+  \textsc{Talks:}&\faYoutubePlay{} \href{https://example.com}{Building Reliable Backend Systems} (Engineering Meetup, 2024)\\
+  &\faYoutubePlay{} \href{https://example.com}{Practical Functional Programming} (Internal Engineering, 2023)\\
+  &\faYoutubePlay{} \href{https://example.com}{Testing Systems That Matter} (Developer Conference, 2022)\\
 \end{tabular}
 
+\endgroup
 \end{document}
